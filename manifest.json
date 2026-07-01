@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Free Palestine",
+  "version": "1.0",
+  "description": "Extension to change names and images in the HTML",
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://richup.io/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["ps.png"],
+      "matches": ["https://richup.io/*"]
+    }
+  ]
+}
